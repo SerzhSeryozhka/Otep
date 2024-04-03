@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите коллчество дней: ");
         int d = scanner.nextInt();
@@ -9,16 +9,12 @@ public class Main {
         int max = 0;
         for (int i = 0; i < d; i++) {
             int u = scanner.nextInt();
-            for (int j = 0; j < u; j++) {
-                max = j;
-                if (u < 0) {
-                    int v=max;
-                    j = 0;
-                    max = j;
-                    if (v>max){
-                        max=v;
-                    }
-                }
+            int j = 0; // точка отчёта отрицактельности
+            if (j < u) {
+                j++;// счётчик оттепели
+            }else{
+            max=j;//к
+            j=0;
             }
         }
         System.out.println("Протяжённость оттепели наибольшая: " + max);
@@ -27,4 +23,4 @@ public class Main {
 //Создал функцию протяжённости оттепели
 //TODO
 // настроить вывод максимальной протяжённости
-//осознать написаное
+//осознать написаное, что я хотел этим добиться
